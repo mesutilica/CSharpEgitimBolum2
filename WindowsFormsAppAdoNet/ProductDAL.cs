@@ -41,6 +41,29 @@ namespace WindowsFormsAppAdoNet
             connection.Close(); // veritabanı bağlantısını kapat
             return urunListesi;
         }
-
+        public DataTable GetAllDataTable()
+        {
+            ConnectionKontrol(); // bağlantıyı kontrol et
+            DataTable dt = new DataTable(); // Boş bir datatable nesnesi oluştur
+            SqlCommand command = new SqlCommand("select * from Products", connection);
+            SqlDataReader reader = command.ExecuteReader();
+            dt.Load(reader); // dt tablosuna reader ile veritabanından okunan verileri yükle
+            reader.Close(); // Veri okuyucuyu kapat
+            command.Dispose(); // sql komut nesnesini kapat
+            connection.Close();// veritabanı bağlantısını kapat
+            return dt; // metodun çağırıldığı yere dt(data tablosunu) gönder.
+        }
+        public int Add(Product product)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Insert into Products (UrunAdi, UrunFiyati, StokMiktari) values (@UrunAdi, @UrunFiyati, @Stok)", connection); // Sql komutu olarak bu sefer insert komutu yazdık
+            command.Parameters.AddWithValue("@UrunAdi", product.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", product.UrunFiyati);
+            command.Parameters.AddWithValue("@Stok", product.StokMiktari);
+            int islemSonucu = command.ExecuteNonQuery(); // ExecuteNonQuery metodu geriye veritabanında etkilenen kayıt sayısını döner
+            command.Dispose(); // sql komut nesnesini kapat
+            connection.Close();// veritabanı bağlantısını kapat
+            return islemSonucu; // Metodumuz geriye int döndüğü için islemSonucu değişkenini geri gönüyoruz
+        }
     }
 }
