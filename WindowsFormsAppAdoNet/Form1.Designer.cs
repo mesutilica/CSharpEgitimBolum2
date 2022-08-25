@@ -30,13 +30,13 @@
         {
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtStokMiktari = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.txtStokMiktari = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.dgvUrunler.Name = "dgvUrunler";
             this.dgvUrunler.Size = new System.Drawing.Size(429, 426);
             this.dgvUrunler.TabIndex = 0;
+            this.dgvUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellClick);
             // 
             // groupBox1
             // 
@@ -67,37 +68,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
             // 
-            // label1
+            // btnEkle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ürün Adı";
+            this.btnEkle.Location = new System.Drawing.Point(122, 192);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.TabIndex = 6;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // txtUrunAdi
+            // txtStokMiktari
             // 
-            this.txtUrunAdi.Location = new System.Drawing.Point(122, 49);
-            this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(100, 20);
-            this.txtUrunAdi.TabIndex = 1;
-            // 
-            // txtUrunFiyati
-            // 
-            this.txtUrunFiyati.Location = new System.Drawing.Point(122, 94);
-            this.txtUrunFiyati.Name = "txtUrunFiyati";
-            this.txtUrunFiyati.Size = new System.Drawing.Size(100, 20);
-            this.txtUrunFiyati.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Ürün Fiyatı";
+            this.txtStokMiktari.Location = new System.Drawing.Point(122, 137);
+            this.txtStokMiktari.Name = "txtStokMiktari";
+            this.txtStokMiktari.Size = new System.Drawing.Size(100, 20);
+            this.txtStokMiktari.TabIndex = 5;
             // 
             // label3
             // 
@@ -108,22 +94,37 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Stok Miktarı";
             // 
-            // txtStokMiktari
+            // label2
             // 
-            this.txtStokMiktari.Location = new System.Drawing.Point(122, 137);
-            this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(100, 20);
-            this.txtStokMiktari.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Ürün Fiyatı";
             // 
-            // btnEkle
+            // txtUrunFiyati
             // 
-            this.btnEkle.Location = new System.Drawing.Point(122, 192);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(75, 23);
-            this.btnEkle.TabIndex = 6;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            this.txtUrunFiyati.Location = new System.Drawing.Point(122, 94);
+            this.txtUrunFiyati.Name = "txtUrunFiyati";
+            this.txtUrunFiyati.Size = new System.Drawing.Size(100, 20);
+            this.txtUrunFiyati.TabIndex = 2;
+            // 
+            // txtUrunAdi
+            // 
+            this.txtUrunAdi.Location = new System.Drawing.Point(122, 49);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtUrunAdi.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ürün Adı";
             // 
             // Form1
             // 

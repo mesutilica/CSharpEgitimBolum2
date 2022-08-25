@@ -65,5 +65,25 @@ namespace WindowsFormsAppAdoNet
             connection.Close();// veritabanı bağlantısını kapat
             return islemSonucu; // Metodumuz geriye int döndüğü için islemSonucu değişkenini geri gönüyoruz
         }
+        public Product GetProduct(string id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("select * from Products where Id = " + id, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            Product product = new Product();
+
+            while (reader.Read())
+            {
+                product.Id = Convert.ToInt32(reader["Id"]);
+                product.UrunAdi = reader["UrunAdi"].ToString();
+                product.StokMiktari = Convert.ToInt32(reader["StokMiktari"]);
+                product.UrunFiyati = Convert.ToDecimal(reader["UrunFiyati"]);
+            }
+            reader.Close(); // Veri okuyucuyu kapat
+            command.Dispose(); // sql komut nesnesini kapat
+            connection.Close(); // veritabanı bağlantısını kapat
+
+            return product;
+        }
     }
 }
