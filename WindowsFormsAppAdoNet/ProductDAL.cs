@@ -85,5 +85,18 @@ namespace WindowsFormsAppAdoNet
 
             return product;
         }
+        public int Update(Product product)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Update Products set UrunAdi = @UrunAdi, UrunFiyati = @UrunFiyati, StokMiktari = @Stok where Id = @UrunId", connection); // Sql komutu olarak bu sefer insert komutu yazdık
+            command.Parameters.AddWithValue("@UrunAdi", product.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", product.UrunFiyati);
+            command.Parameters.AddWithValue("@Stok", product.StokMiktari);
+            command.Parameters.AddWithValue("@UrunId", product.Id);
+            int islemSonucu = command.ExecuteNonQuery(); // ExecuteNonQuery metodu geriye veritabanında etkilenen kayıt sayısını döner
+            command.Dispose(); // sql komut nesnesini kapat
+            connection.Close();// veritabanı bağlantısını kapat
+            return islemSonucu; // Metodumuz geriye int döndüğü için islemSonucu değişkenini geri gönüyoruz
+        }
     }
 }

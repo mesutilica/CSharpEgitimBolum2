@@ -47,6 +47,8 @@ namespace WindowsFormsAppAdoNet
             }
         }
 
+        // Ekleme işleminden sonraki işlemimiz gridview dan kayıt seçip, seçilen kaydın bilgilerini textboxlara doldurmak. Bunun için gridview ın events (olaylar) kısmında cell click olayını etkinleştirmemiz lazım. Gride sağ klik yapıp properties e tıklayıp açılan pencereden şimşek ikonuna tıklayıp oradan secc click kutucuğuna mouse ile çift tıklayarak bu olayı aktifleştirebiliyoruz.
+
         private void dgvUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //txtStokMiktari.Text = dgvUrunler.CurrentRow.Cells[3].Value.ToString();
@@ -61,10 +63,34 @@ namespace WindowsFormsAppAdoNet
             txtStokMiktari.Text = product.StokMiktari.ToString();
             txtUrunAdi.Text = product.UrunAdi.ToString();
             txtUrunFiyati.Text = product.UrunFiyati.ToString();
-
+            btnGuncelle.Enabled = true; // Listeden kayıt seçildiğinde güncelle butonunu aktif et
         }
 
-        // Ekleme işleminden sonraki işlemimiz gridview dan kayıt seçip, seçilen kaydın bilgilerini textboxlara doldurmak. Bunun için gridview ın events (olaylar) kısmında cell click olayını etkinleştirmemiz lazım. Gride sağ klik yapıp properties e tıklayıp açılan pencereden şimşek ikonuna tıklayıp oradan secc click kutucuğuna mouse ile çift tıklayarak bu olayı aktifleştirebiliyoruz.
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Product product = new Product(); // Boş bir product nesnesi oluşturduk
+                product.StokMiktari = Convert.ToInt32(txtStokMiktari.Text);
+                product.UrunAdi = txtUrunAdi.Text;
+                product.UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text);
+                product.Id = Convert.ToInt32(dgvUrunler.CurrentRow.Cells[0].Value);
+                var islemSonucu = productDAL.Update(product); // Add metoduna product ı eklemesi için gönderdik
+
+                if (islemSonucu > 0)
+                {
+                    dgvUrunler.DataSource = productDAL.GetAllDataTable(); // Data grid view da eklenen son kaydı da görebilmek için
+                    MessageBox.Show("Kayıt Başarılı");
+                }
+                else MessageBox.Show("Kayıt Başarısız!");
+            }
+            catch (Exception hata)
+            {
+                //MessageBox.Show("Hata Oluştu!\nGeçersiz Değer Girdiniz!");
+                MessageBox.Show(hata.Message);
+            }
+        }
+
 
 
     }

@@ -37,6 +37,7 @@
             this.txtUrunFiyati = new System.Windows.Forms.TextBox();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Controls.Add(this.btnEkle);
             this.groupBox1.Controls.Add(this.txtStokMiktari);
             this.groupBox1.Controls.Add(this.label3);
@@ -70,7 +72,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(122, 192);
+            this.btnEkle.Location = new System.Drawing.Point(32, 191);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(75, 23);
             this.btnEkle.TabIndex = 6;
@@ -126,6 +128,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Adı";
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Enabled = false;
+            this.btnGuncelle.Location = new System.Drawing.Point(113, 191);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle.TabIndex = 7;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +168,7 @@
         private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }
 
