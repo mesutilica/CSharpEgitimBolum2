@@ -64,6 +64,7 @@ namespace WindowsFormsAppAdoNet
             txtUrunAdi.Text = product.UrunAdi.ToString();
             txtUrunFiyati.Text = product.UrunFiyati.ToString();
             btnGuncelle.Enabled = true; // Listeden kayıt seçildiğinde güncelle butonunu aktif et
+            btnSil.Enabled = true; // Sil butonunu aktif et
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -91,7 +92,22 @@ namespace WindowsFormsAppAdoNet
             }
         }
 
-
-
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var islemSonucu = productDAL.Delete(dgvUrunler.CurrentRow.Cells[0].Value.ToString());
+                if (islemSonucu > 0)
+                {
+                    dgvUrunler.DataSource = productDAL.GetAllDataTable();
+                    MessageBox.Show("Silme Başarılı");
+                }
+                else MessageBox.Show("Silme Başarısız!");
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show(hata.Message);
+            }
+        }
     }
 }

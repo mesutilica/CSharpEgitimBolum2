@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Data; // Veritabanı işlemleri için gerekli
 using System.Data.SqlClient; // Adonet kütüphaneleri
 
@@ -97,6 +96,17 @@ namespace WindowsFormsAppAdoNet
             command.Dispose(); // sql komut nesnesini kapat
             connection.Close();// veritabanı bağlantısını kapat
             return islemSonucu; // Metodumuz geriye int döndüğü için islemSonucu değişkenini geri gönüyoruz
+        }
+        public int Delete(string id)
+        {
+            ConnectionKontrol();
+
+            SqlCommand command = new SqlCommand("Delete from Products where Id=@urunId", connection);
+            command.Parameters.AddWithValue("@urunId", id);
+            int islemSonucu = command.ExecuteNonQuery();
+            command.Dispose();
+            connection.Close();
+            return islemSonucu;
         }
     }
 }

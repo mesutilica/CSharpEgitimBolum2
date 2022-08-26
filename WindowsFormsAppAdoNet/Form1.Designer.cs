@@ -30,6 +30,7 @@
         {
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.txtStokMiktari = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,7 +38,7 @@
             this.txtUrunFiyati = new System.Windows.Forms.TextBox();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Controls.Add(this.btnEkle);
             this.groupBox1.Controls.Add(this.txtStokMiktari);
@@ -69,6 +71,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Enabled = false;
+            this.btnGuncelle.Location = new System.Drawing.Point(113, 191);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle.TabIndex = 7;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
@@ -128,16 +141,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Adı";
             // 
-            // btnGuncelle
+            // btnSil
             // 
-            this.btnGuncelle.Enabled = false;
-            this.btnGuncelle.Location = new System.Drawing.Point(113, 191);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
-            this.btnGuncelle.TabIndex = 7;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            this.btnSil.Enabled = false;
+            this.btnSil.Location = new System.Drawing.Point(194, 191);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 8;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // Form1
             // 
@@ -169,6 +182,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnSil;
     }
 }
 
