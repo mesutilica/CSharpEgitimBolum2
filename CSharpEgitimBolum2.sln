@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppAdoNet", "WindowsFormsAppAdoNet\WindowsFormsAppAdoNet.csproj", "{962A2BF2-F403-46F1-9B58-CF725484A764}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppEntityFrameworkDbFirst", "WindowsFormsAppEntityFrameworkDbFirst\WindowsFormsAppEntityFrameworkDbFirst.csproj", "{461EC699-FDDB-464A-8A92-85CB1EC4C0D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{962A2BF2-F403-46F1-9B58-CF725484A764}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{962A2BF2-F403-46F1-9B58-CF725484A764}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{962A2BF2-F403-46F1-9B58-CF725484A764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461EC699-FDDB-464A-8A92-85CB1EC4C0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461EC699-FDDB-464A-8A92-85CB1EC4C0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461EC699-FDDB-464A-8A92-85CB1EC4C0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461EC699-FDDB-464A-8A92-85CB1EC4C0D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
