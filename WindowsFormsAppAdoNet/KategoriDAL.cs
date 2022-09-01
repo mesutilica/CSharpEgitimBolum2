@@ -42,6 +42,51 @@ namespace WindowsFormsAppAdoNet
             return islemSonucu; // Metodumuz geriye int döndüğü için islemSonucu değişkenini geri gönüyoruz
         }
 
+        public Kategori Get(string id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("select * from Kategoriler where Id = " + id, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            Kategori kategori = new Kategori();
+
+            while (reader.Read())
+            {
+                kategori.Id = Convert.ToInt32(reader["Id"]);
+                kategori.KategoriAdi = reader["KategoriAdi"].ToString();
+                kategori.Durum = Convert.ToBoolean(reader["Durum"]);
+            }
+            reader.Close(); // Veri okuyucuyu kapat
+            command.Dispose(); // sql komut nesnesini kapat
+            connection.Close(); // veritabanı bağlantısını kapat
+
+            return kategori;
+        }
+
+        public int Update(Kategori kategori)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Update Kategoriler set KategoriAdi=@KategoriAdi, Durum=@Durum where Id=@id", connection); // Sql komutu olarak bu sefer insert komutu yazdık
+            command.Parameters.AddWithValue("@KategoriAdi", kategori.KategoriAdi);
+            command.Parameters.AddWithValue("@Durum", kategori.Durum);
+            command.Parameters.AddWithValue("@id", kategori.Id);
+
+            int islemSonucu = command.ExecuteNonQuery(); // ExecuteNonQuery metodu geriye veritabanında etkilenen kayıt sayısını döner
+            command.Dispose(); // sql komut nesnesini kapat
+            connection.Close();// veritabanı bağlantısını kapat
+            return islemSonucu; // Metodumuz geriye int döndüğü için islemSonucu değişkenini geri gönüyoruz
+        }
+
+        public int Delete(string id)
+        {
+            ConnectionKontrol();
+
+            SqlCommand command = new SqlCommand("Delete from Kategoriler where Id=@id", connection);
+            command.Parameters.AddWithValue("@id", id);
+            int islemSonucu = command.ExecuteNonQuery();
+            command.Dispose();
+            connection.Close();
+            return islemSonucu;
+        }
 
     }
 }
