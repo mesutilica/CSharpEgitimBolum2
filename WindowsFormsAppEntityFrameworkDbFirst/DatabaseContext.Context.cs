@@ -12,20 +12,20 @@ namespace WindowsFormsAppEntityFrameworkDbFirst
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class UrunYonetimiAdoNetEntities : DbContext
     {
         public UrunYonetimiAdoNetEntities()
             : base("name=UrunYonetimiAdoNetEntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
-        public virtual DbSet<Kategoriler> Kategoriler { get; set; }
+
+        public virtual DbSet<Kategoriler> Kategoriler { get; set; } // EF de Veritabanı tablolarını dbset lerle ifade ediyoruz
         public virtual DbSet<Products> Products { get; set; }
     }
 }

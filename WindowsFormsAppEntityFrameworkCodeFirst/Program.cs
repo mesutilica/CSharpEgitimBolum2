@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsAppEntityFrameworkDbFirst
+namespace WindowsFormsAppEntityFrameworkCodeFirst
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace WindowsFormsAppEntityFrameworkDbFirst
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KategoriYonetimi());
+            Application.Run(new Form1());
         }
     }
 }
