@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppEntityFramew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppEntityFrameworkCodeFirst", "WindowsFormsAppEntityFrameworkCodeFirst\WindowsFormsAppEntityFrameworkCodeFirst.csproj", "{769586FF-1677-44D9-BC70-B93423E3AE95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationEgitimi", "WebApplicationEgitimi\WebApplicationEgitimi.csproj", "{1E602DE7-303D-4CE8-B169-A98E34304D64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{769586FF-1677-44D9-BC70-B93423E3AE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769586FF-1677-44D9-BC70-B93423E3AE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{769586FF-1677-44D9-BC70-B93423E3AE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E602DE7-303D-4CE8-B169-A98E34304D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E602DE7-303D-4CE8-B169-A98E34304D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E602DE7-303D-4CE8-B169-A98E34304D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E602DE7-303D-4CE8-B169-A98E34304D64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
