@@ -67,8 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CssEgitimi\Css01Giris.html" />
+    <Content Include="CssEgitimi\Css02Arkaplanlar.html" />
     <Content Include="Global.asax" />
+    <Content Include="HariciCss.css" />
     <Content Include="Images\asus-laptop.jpg" />
+    <Content Include="Images\logo.png" />
     <Content Include="Images\resim-18.JPG" />
     <Content Include="index.html" />
     <Content Include="Web.config" />

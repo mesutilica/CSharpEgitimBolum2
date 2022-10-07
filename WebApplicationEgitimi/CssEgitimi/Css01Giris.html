@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Css Giriş</title>
+    <style>
+        body { color: black; }
+        h1 { color: red; }
+        h2 { color: gray; }
+    </style>
+    <link href="../HariciCss.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1>CSS Nedir?</h1>
+
+    <ul>
+        <li>CSS in açılımı Cascading Style Sheets </li>
+        <li>CSS, HTML öğelerinin ekranda, kağıda veya diğer ortamlarda nasıl görüntüleneceğini belirler</li>
+        <li>CSS ile birden çok web sayfasının düzenini aynı anda denetleyebiliriz</li>
+        <li>Harici stil sayfaları CSS dosyalarında depolanır</li>
+    </ul>
+
+    <h2>CSS Seçiciler</h2>
+
+    <h2>Css Söz Dizimi(Syntax)</h2>
+
+    <p>CSS kural kümesi bir seçici ve bildirim bloğundan oluşur:</p>
+
+    <p>Örneğin h1 {color:blue;} şeklinde bir bildirimde bulunursak burada h1 seçici yani css i uygulamak istediğimiz elemandır, küme parantezi içindeki color property yani özelliktir, blue ise bu özelliğe atanan değer (value) dir.</p>
+
+    <hr />
+
+    <h3>id Seçici - Css de html elementlerine id attribute ü tanımlayarak o elementi seçebiliriz</h3>
+
+    <div id="idSecici">
+        Bu div elementini id özelliğine göre seçip Css uygulayabiliriz
+    </div>
+
+    <hr />
+
+    <h3>class Seçici - Css de html elementlerine class attribute ü tanımlayarak o elementi seçebiliriz</h3>
+
+    <div class="classSecici">
+        Bu div elementini class özelliğine göre seçip Css uygulayabiliriz
+    </div>
+
+    <hr />
+
+    <h2>CSS Nasıl Eklenir</h2>
+
+    <h3>CSS Eklemenin Üç Yolu Vardır</h3>
+
+    <ol>
+        <li>Harici CSS</li>
+        <li>Dahili CSS</li>
+        <li>Satır içi (İnline) CSS</li>
+    </ol>
+
+    <div style="color:brown">Satır içi (İnline) CSS</div>
+
+    <p style="background-color: brown; color: bisque;">
+        Satır içi (İnline) CSS : Bu elementte kullandığımız  style="background-color: brown; color: bisque;" kodları ile yazım şekline inline css denir. Bu şekilde de html elementlerine css yazabiliriz.
+    </p>
+
+    <h3 style="font-family: 'Times New Roman', Times, serif">
+        Style kullanarak html kontrolüne yazı tipi fontu verme
+    </h3>
+
+    <h2 style="border: 3px solid DodgerBlue">
+        Html elementlerinde border ile çerçeve kullanabiliriz
+    </h2>
+
+    <h2 style="border: 3px solid #ddd; background-color: #848484; color: white">
+        Html elementlerinde renk ismi yerine renk kodlarını da kullanabiliriz
+    </h2>
+
+    <h3>HTML öğesi için birden fazla stil belirtildiğinde hangi stil kullanılır?</h3>
+
+    <p>
+        1- Satır içi stili (İnline CSS) (html öğesi içinde h3 style="color: blue;" şeklinde yazarsak) <br />
+        2- Dış ve iç stil sayfaları (baş bölümünde belirttiğim gibi css lerin sırasına göre) <br />
+        3- Tarayıcı varsayılan (her tarayıcıcnın html elemanlarına uyguladığı varsayılan css özellikleri vardır)
+    </p>
+
+    <h2>CSS Kenarlık Rengi (Border)</h2>
+
+    <p>
+        Css de html elemanlarına çerçeve belirleyebiliriz. Bunun için css in border özelliği kullanılır.
+    </p>
+
+
+    <h1 style="border: 1px solid Tomato;">Solid-düz çizgi</h1>
+    <h2 style="border: 2px dashed DodgerBlue;">dashed - kesik çizgi</h2>
+    <h3 style="border: 2px dotted Violet;">dotted - noktalı çizgi</h3>
+    <h4 style="border: 5px double red;">double - çift çizgi</h4>
+    <h5 style="border: 5px groove red;">groove - geniş çerçeve</h5>
+    <h6 style="border: 5px inset gray;">inset - geçişli</h6>
+    <h6 style="border: 5px outset gray;">outset - geçişli</h6>
+
+</body>
+</html>
