@@ -72,12 +72,17 @@
     <Content Include="CssEgitimi\Css03MarginPadding.html" />
     <Content Include="CssEgitimi\Css04GenislikYukseklik.html" />
     <Content Include="CssEgitimi\Css05DisplayOzelligi.html" />
+    <Content Include="CssEgitimi\Css06PositionOzelligi.html" />
+    <Content Include="CssEgitimi\Css07icerikTasmasi.html" />
+    <Content Include="CssEgitimi\Css08FloatOzelligi.html" />
     <Content Include="Global.asax" />
     <Content Include="HariciCss.css" />
     <Content Include="Images\asus-laptop.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\resim-18.JPG" />
     <Content Include="index.html" />
+    <Content Include="MiniSite\index.html" />
+    <Content Include="MiniSite\stil.css" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
