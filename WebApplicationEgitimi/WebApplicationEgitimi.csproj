@@ -81,6 +81,13 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\resim-18.JPG" />
     <Content Include="index.html" />
+    <Content Include="JavascriptEgitimi\Konu01JavascripGiris.html" />
+    <Content Include="JavascriptEgitimi\Konu02JsMatematikselislemler.html" />
+    <Content Include="JavascriptEgitimi\Konu03KararYapilari.html" />
+    <Content Include="JavascriptEgitimi\Konu04Operatorler.html" />
+    <Content Include="JavascriptEgitimi\Konu05Donguler.html" />
+    <Content Include="JavascriptEgitimi\Konu06SwitchCase.html" />
+    <Content Include="JavascriptEgitimi\Konu07Fonksiyonlar.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <Content Include="Web.config" />
