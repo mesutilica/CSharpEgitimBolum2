@@ -88,6 +88,11 @@
     <Content Include="JavascriptEgitimi\Konu05Donguler.html" />
     <Content Include="JavascriptEgitimi\Konu06SwitchCase.html" />
     <Content Include="JavascriptEgitimi\Konu07Fonksiyonlar.html" />
+    <Content Include="JavascriptEgitimi\Konu08Olaylar.html" />
+    <Content Include="JavascriptEgitimi\Konu09Diziler.html" />
+    <Content Include="JavascriptEgitimi\Konu10Nesneler.html" />
+    <Content Include="JavascriptEgitimi\Konu11StringMetotlari.html" />
+    <Content Include="JavascriptEgitimi\Konu12Seciciler.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <Content Include="Web.config" />
