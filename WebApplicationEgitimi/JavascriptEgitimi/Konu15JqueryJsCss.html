@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jquery ve Javascript ile Css İşlemleri</title>
+    <style>
+        .baslik { color: red; font-size: larger; }
+        .sekil { color: crimson; }
+    </style>
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Jquery ve Javascript ile Css İşlemleri</h1>
+
+    <h3 id="jqilegizle">Bu element jquery ile gizlenecek</h3>
+    <h3 id="jsilegizle">Bu element javascript ile gizlenecek</h3>
+
+    <script>
+        $("#jqilegizle").hide() // elementi jquery ile gizle
+        document.getElementById("jsilegizle").style.display = "none" // elementi Javascript ile gizle
+
+        // Elementleri Göster
+        $("#jqilegizle").show() // jquery ile elementi görünür yapma
+        document.getElementById("jsilegizle").style.display = "block" // elementi Javascript ile göster
+    </script>
+
+    <hr />
+
+    <h2>Elementlerin Ccsslerini değiştirme</h2>
+    <div id="jqsekillendir" class="sekil test">Elementlerin css lerini değiştirme</div>
+    <div id="jssekillendir" class="jssekil jstest">Elementlerin css lerini değiştirme</div>
+    <style>
+        .jsclass { background-color: blueviolet; }
+    </style>
+
+    <script>
+        //Jquery ile css işlemleri
+
+    </script>
+</body>
+</html>

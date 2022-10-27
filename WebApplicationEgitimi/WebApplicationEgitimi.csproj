@@ -81,6 +81,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\resim-18.JPG" />
     <Content Include="index.html" />
+    <Content Include="JavascriptEgitimi\jquery-3.6.1.min.js" />
     <Content Include="JavascriptEgitimi\Konu01JavascripGiris.html" />
     <Content Include="JavascriptEgitimi\Konu02JsMatematikselislemler.html" />
     <Content Include="JavascriptEgitimi\Konu03KararYapilari.html" />
@@ -93,8 +94,16 @@
     <Content Include="JavascriptEgitimi\Konu10Nesneler.html" />
     <Content Include="JavascriptEgitimi\Konu11StringMetotlari.html" />
     <Content Include="JavascriptEgitimi\Konu12Seciciler.html" />
+    <Content Include="JavascriptEgitimi\Konu13JquerySeciciler.html" />
+    <Content Include="JavascriptEgitimi\Konu14JqueryHtml.html" />
+    <Content Include="JavascriptEgitimi\Konu15JqueryJsCss.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -113,6 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

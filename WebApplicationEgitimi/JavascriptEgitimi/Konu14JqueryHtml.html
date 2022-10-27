@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jquery ile Html Metin İşlemleri</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <style>
+        .brd { border: 1px solid; min-height: 34px; }
+    </style>
+</head>
+<body>
+
+    <h1>Jquery ile Html Metin İşlemleri</h1>
+
+    <h2>Metin İçeriğini Değiştirme</h2>
+
+    <p id="degistir">Merhaba</p>
+    <p id="jsiledegistir">Selam</p>
+
+    <script>
+        $(function () {
+            var secilecekelement = $("#degistir");
+            secilecekelement.text("degistir id li element içeriği jquery text metoduyla değişti");
+        });
+        // Element içeriğini javascript ile değiştirme
+        var secilenElement = document.getElementById("jsiledegistir");
+        secilenElement.textContent = "Selam yazısı javascript ile değişti";
+    </script>
+
+    <hr />
+
+    <h2>Metin İçeriğini Alma</h2>
+    <p id="jqileal">Merhaba Jquery</p>
+    <p id="jsileal">Merhaba Javascript</p>
+
+    <h3 id="jqmetin" class="brd"></h3>
+    <h3 id="jsmetin" class="brd"></h3>
+
+    <script>
+        //Metin İçeriğini Jquery ile Alma
+        var yazi = $("#jqileal").text(); // jqileal id li elementin içindeki metni aldık
+        $("#jqmetin").text(yazi); // aldığımız metni jqmetin id li elemente yazdırdık
+        //Metin İçeriğini Javascript ile Alma
+        var metin = document.getElementById("jsileal").textContent; // js textContent özelliğiyle metni aldık
+        document.getElementById("jsmetin").textContent = metin;
+    </script>
+
+    <hr />
+
+    <h2>Html elementlerine içerikleri Html olarak Ayarlama</h2>
+
+    <div id="htmlicerik" class="brd"></div>
+
+    <script>
+        // Jquery ile html icerik ekleme
+        $("#htmlicerik").text("<h4>Jquery ile html icerik ekleme</h4>");
+        $("#htmlicerik").html("<h4>Jquery ile html icerik ekleme</h4>");
+
+        // Javascript ile html icerik ekleme
+        document.getElementById("htmlicerik").textContent += "<h4>textContent</h4>";
+        document.getElementById("htmlicerik").innerText += "<h4>innerText</h4>";
+        document.getElementById("htmlicerik").innerHTML += "<h4>innerHTML</h4>";
+    </script>
+
+    <hr />
+
+    <h2>Elementlerin Html İçeriğini Alma</h2>
+
+    <h3>Jquery ile</h3>
+    <div id="jqhtmlicerikAl" style="border: 1px solid"></div>
+
+    <h3>Javascript ile</h3>
+
+    <div id="jshtmlicerikAl" style="border: 1px solid"></div>
+
+    <script>
+        // Jquery ile html icerik alma
+        var icerik = $("#htmlicerik").html();
+        $("#jqhtmlicerikAl").html(icerik);
+
+        // Javascript ile html icerik alma
+        var content = document.getElementById("htmlicerik").innerHTML;
+        document.getElementById("jshtmlicerikAl").innerHTML = content;
+    </script>
+
+</body>
+</html>
