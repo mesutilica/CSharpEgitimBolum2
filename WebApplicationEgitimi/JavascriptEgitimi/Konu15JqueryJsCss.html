@@ -6,6 +6,7 @@
     <style>
         .baslik { color: red; font-size: larger; }
         .sekil { color: crimson; }
+        .brd { border: 1px solid; min-height: 34px; }
     </style>
     <script src="../Scripts/jquery-3.6.0.min.js"></script>
 </head>
@@ -27,15 +28,30 @@
     <hr />
 
     <h2>Elementlerin Ccsslerini değiştirme</h2>
-    <div id="jqsekillendir" class="sekil test">Elementlerin css lerini değiştirme</div>
-    <div id="jssekillendir" class="jssekil jstest">Elementlerin css lerini değiştirme</div>
+    <div id="jqsekillendir" class="sekil test brd">Elementlerin css lerini değiştirme</div>
+    <div id="jssekillendir" class="jssekil jstest brd">Elementlerin css lerini değiştirme</div>
     <style>
         .jsclass { background-color: blueviolet; }
     </style>
 
     <script>
         //Jquery ile css işlemleri
+        $("#jqsekillendir").css("font-size", "34px")
+        $("#jqsekillendir").css("padding", "1rem").css("margin", "18px")
 
+        // Jquery ile class ekleme-silme
+        $("h2:first").addClass("baslik") // h2:first seçicisi sayfadaki h2 elementlerinden ilkini seç demektir
+        $("#jqsekillendir").addClass("jsclass deneme")
+        // var olan class ı kaldırma
+        $("#jqsekillendir").removeClass("sekil")
+
+        //Javascript ile css işlemleri
+        document.getElementById("jssekillendir").style.color = "blue"
+        document.getElementById("jssekillendir").style.padding = "18px"
+        document.getElementById("jssekillendir").style.margin = "1rem"
+        // Javascript ile class ekleme-silme
+        document.getElementById("jssekillendir").classList.add("jsclass")
+        document.getElementById("jssekillendir").classList.remove("jsclass")
     </script>
 </body>
 </html>

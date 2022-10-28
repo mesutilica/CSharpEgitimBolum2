@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jquery ile Yukarı Çık Uygulaması</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <style>
+        body {
+            min-height: 180vh
+        }
+        #yukariCik{
+            position:fixed;
+            bottom: 18px;
+            right: 18px;
+            z-index: 18;
+            display: none;
+            background: orange;
+            color:white;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery ile Yukarı Çık Uygulaması</h1>
+
+    <a href="#" id="yukariCik">Yukarı Çık</a>
+
+    <script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 100) $("#yukariCik").fadeIn(); // eğer sayfa mouse ile yukarıdan 100px in üzerinde aşağı kaydırılırsa yukariCik id li butonu yavaşça göster
+            else $("#yukariCik").fadeOut(); // sayfa yukarı çıktığında yukariCik elementini gizle
+        });
+
+        $("#yukariCik").click(function () { // yukarıçık elementine tıklandığında
+            $("html,body").animate({ scrollTop: 0 }, 1000); // sayfayı yavaşça yukarı kaydır
+        })
+    </script>
+</body>
+</html>

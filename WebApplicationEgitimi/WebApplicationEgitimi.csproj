@@ -82,7 +82,7 @@
     <Content Include="Images\resim-18.JPG" />
     <Content Include="index.html" />
     <Content Include="JavascriptEgitimi\jquery-3.6.1.min.js" />
-    <Content Include="JavascriptEgitimi\Konu01JavascripGiris.html" />
+    <Content Include="JavascriptEgitimi\Konu01JavascriptGiris.html" />
     <Content Include="JavascriptEgitimi\Konu02JsMatematikselislemler.html" />
     <Content Include="JavascriptEgitimi\Konu03KararYapilari.html" />
     <Content Include="JavascriptEgitimi\Konu04Operatorler.html" />
@@ -97,6 +97,10 @@
     <Content Include="JavascriptEgitimi\Konu13JquerySeciciler.html" />
     <Content Include="JavascriptEgitimi\Konu14JqueryHtml.html" />
     <Content Include="JavascriptEgitimi\Konu15JqueryJsCss.html" />
+    <Content Include="JavascriptEgitimi\Konu16Jquery-DOM.html" />
+    <Content Include="JavascriptEgitimi\Konu17Jquery-Efektler.html" />
+    <Content Include="JavascriptEgitimi\Konu18Jquery-Ajax.html" />
+    <Content Include="JavascriptEgitimi\Konu19Jquery-Yukari-Cik-Uygulamasi.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
@@ -104,6 +108,7 @@
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="TextFile1.txt" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -133,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="BootstrapEgitimi\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
