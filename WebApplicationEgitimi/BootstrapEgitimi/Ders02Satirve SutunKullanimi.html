@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap Satır ve Sütun Kullanımı</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <h1>Bootstrap Satır ve Sütun Kullanımı</h1>
+
+        <h2>
+            Row-Satır Oluşturma
+        </h2>
+
+        <div class="conatiner">
+            <div class="row">
+                Bir dive class="row" kodu ekleyerek bu divin responsive bir satır hale gelmesini sağlayabiliriz
+            </div>
+        </div>
+
+        <h2>
+            Col-Sütun Oluşturma
+        </h2>
+
+        <div class="conatiner">
+            <div class="row">
+                <div class="col">
+                    Bir satır içinde sütun divleri kullanmak istersek ilgili elemente class="col" değerini yazmamız yeterli.
+                </div>
+                <div class="col">
+                    class ı row olan elemente kaç kolon eklemek istersek o kadar classı col olan element ekleyebiliriz.
+                </div>
+                <div class="col">
+                    col 3
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-3">
+                    Bir satır içinde sütun divleri kullanmak istersek ilgili elemente class="col" değerini yazmamız yeterli.
+                </div>
+                <div class="col-6 col-sm-6">
+                    Bu div 6 birimlik bir ölçüye göre class="col-6" kodu ile ölçülendirilmiştir.
+                    <hr />
+                    Bir elemente birden fazla bootstrap class ı uygulayabiliriz.
+                    <hr />
+                    class özelliğine col-sm-4 kodu ekleyerek small ekranlarda 4 birimlik yer kaplamasını sağlayabiliriz.
+                </div>
+                <div class="col-3">
+                    Burası 3. kolon
+                </div>
+            </div>
+
+        </div>
+
+        <h2>
+            Satırdaki Kolon Sayısını Ayarlama
+        </h2>
+
+        <p>
+            row classına sahip divde kaç kolon gösterileceğini ayarlamak için dive class="row row-cols-3" kodu ekleyerek 1 satırda 3 kolon gösterilmesini sağlayabiliriz.
+            <hr />
+            1 satırda 1 ile 6 arasında vereceğimiz sayı ile kaç kolon gösterileceğini ayarlarız.
+        </p>
+
+        <div class="row row-cols-3">
+            <div class="col">col 1</div>
+            <div class="col">col 2</div>
+            <div class="col">col 3</div>
+            <div class="col">col 4</div>
+            <div class="col">col 5</div>
+            <div class="col">col 6</div>
+        </div>
+
+        <hr />
+
+    </div>
+
+
+    <br /><br /><br /><br /><br />
+</body>
+</html>

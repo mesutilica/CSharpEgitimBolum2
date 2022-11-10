@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap de Elementleri Sıralama</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <h1>Bootstrap de Elementleri Sıralama</h1>
+
+        <p>
+            Kolonları sıralamak için order-0 ile order-5 arasında vereceğimiz değerle sıralama yapabiliriz.
+        </p>
+
+        <div class="row">
+            <div class="col">kolon 1</div>
+            <div class="col order-5">kolon 2 order-5</div>
+            <div class="col order-2">kolon 3 order-2</div>
+            <div class="col order-3">kolon 4 order-3</div>
+            <div class="col">kolon 5</div>
+            <div class="col order-1">kolon 6 order-1</div>
+        </div>
+
+        <hr />
+
+        <h2>
+            Offset ile Kolonları İttirme
+        </h2>
+
+        <div class="row">
+            <div class="col-md-4">col 1</div>
+            <div class="col-md-3 offset-md-2">
+                col 2 bu kolonda offset-md-2 classı ile medium ve üzeri ölçüdeki cihazlarda soldaki kolondan 2 birim kadar sağa doğru ittirme yapılmıştır.
+            </div>
+        </div>
+
+        <p>
+            offset-md-0 ile offset-md-11 arasında değer girerek kolonu sağa doğru ittirme işlemi yapabilmekteyiz.
+        </p>
+
+    </div>
+</body>
+</html>
