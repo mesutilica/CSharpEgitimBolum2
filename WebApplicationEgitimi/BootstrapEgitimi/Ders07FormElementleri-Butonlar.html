@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form Elementleri ve Buton Classları</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Form Elementleri ve Buton Classları</h1>
+
+        <form action="/" method="post">
+            <table>
+                <tr>
+                    <td>Kullanıcı Adınız</td>
+                    <td>
+                        <input type="text" name="username" value="" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Şifreniz</td>
+                    <td>
+                        <input type="password" name="password" value="" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="giris" value="Giriş" class="btn btn-primary" />
+                        <input type="submit" name="kaydol" value="Kaydol" class="btn btn-secondary" />
+                        <input type="submit" name="sifre" value="Şifremi Unuttum" class="btn btn-danger" />
+                        <input type="submit" name="kaydet" value="Kaydet" class="btn btn-success" />
+                        <input type="submit" name="guncelle" value="Güncelle" class="btn btn-info" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <hr />
+
+        <h2>
+            Bootstrap Butonlar
+        </h2>
+
+        <input type="submit" name="guncelle" value="btn-outline-danger" class="btn btn-outline-danger" />
+        <input type="submit" name="guncelle" value="btn-outline-dark" class="btn btn-outline-dark" />
+        <input type="submit" name="guncelle" value="btn-outline-info" class="btn btn-outline-info" />
+        <input type="submit" name="guncelle" value="btn-outline-light" class="btn btn-outline-light" />
+        <input type="submit" name="guncelle" value="btn-outline-primary" class="btn btn-outline-primary" />
+        <input type="submit" name="guncelle" value="btn-outline-secondary" class="btn btn-outline-secondary" />
+        <input type="submit" name="guncelle" value="btn-outline-success" class="btn btn-outline-success" />
+        <input type="submit" name="guncelle" value="btn-outline-danger" class="btn btn-outline-danger" />
+
+        <hr />
+
+        <a href="#">A elementi</a>
+        <a href="#" class="btn btn-outline-success">btn-outline-success</a>
+        <a href="#" class="btn btn-success">btn-success</a>
+
+    </div>
+</body>
+</html>

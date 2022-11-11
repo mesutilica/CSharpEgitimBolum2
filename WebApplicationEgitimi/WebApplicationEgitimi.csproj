@@ -69,6 +69,12 @@
     <Content Include="BootstrapEgitimi\Ders03Hizalama.html" />
     <Content Include="BootstrapEgitimi\Ders04Siralama-ittirme.html" />
     <Content Include="BootstrapEgitimi\Ders05Margin-Padding-Kullanimi.html" />
+    <Content Include="BootstrapEgitimi\Ders06TableClasslari.html" />
+    <Content Include="BootstrapEgitimi\Ders07FormElementleri-Butonlar.html" />
+    <Content Include="BootstrapEgitimi\Ders08Alerts.html" />
+    <Content Include="BootstrapEgitimi\Ders09RenkClasslari.html" />
+    <Content Include="BootstrapEgitimi\Ders10Listeler.html" />
+    <Content Include="BootstrapEgitimi\Ders11JsKomponentler.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -97,7 +103,7 @@
     <Content Include="HariciCss.css" />
     <Content Include="Images\asus-laptop.jpg" />
     <Content Include="Images\logo.png" />
-    <Content Include="Images\resim-18.JPG" />
+    <Content Include="Images\resim-18.jpg" />
     <Content Include="index.html" />
     <Content Include="JavascriptEgitimi\jquery-3.6.1.min.js" />
     <Content Include="JavascriptEgitimi\Konu01JavascriptGiris.html" />
