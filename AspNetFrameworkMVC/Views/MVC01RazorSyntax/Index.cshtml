@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "MVC01 Razor Syntax";
+    string adi = "Ali";
+    string[] isimler = new string[] { "Murat", "Mesut", "Yılmaz" };
+}
+
+<h2>MVC01 Razor Syntax</h2>
+
+<b>@ViewBag.Title</b>
+
+@ViewBag.Title
+
+<h3>Adi değişkeni değeri : @adi</h3>
+
+<h3>İsimleri Ekrana Yazdır</h3>
+
+@foreach (var item in isimler)
+{
+    <h3>@item</h3>
+    @item
+}

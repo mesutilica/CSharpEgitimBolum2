@@ -12,6 +12,7 @@ namespace WebApplicationEgitimi
         protected void Page_Load(object sender, EventArgs e)
         {
             // Code behind : arka yüz, c# kodlarını yazdığımız alan
+            TextBox1.Text = string.Empty;
         }
     }
 }
