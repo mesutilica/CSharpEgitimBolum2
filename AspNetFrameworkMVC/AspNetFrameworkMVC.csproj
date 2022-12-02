@@ -124,9 +124,15 @@
     <Compile Include="Controllers\MVC01RazorSyntaxController.cs" />
     <Compile Include="Controllers\MVC02HtmlHelpersController.cs" />
     <Compile Include="Controllers\MVC03DataTransferController.cs" />
+    <Compile Include="Controllers\MVC04ModelBindingController.cs" />
+    <Compile Include="Controllers\MVC05ModelValidationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Adres.cs" />
+    <Compile Include="Models\Kullanici.cs" />
+    <Compile Include="Models\Uye.cs" />
+    <Compile Include="Models\UyeSayfasiViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,10 +174,15 @@
     <Content Include="Views\MVC01RazorSyntax\Index.cshtml" />
     <Content Include="Views\MVC02HtmlHelpers\Index.cshtml" />
     <Content Include="Views\MVC03DataTransfer\Index.cshtml" />
+    <Content Include="Views\MVC04ModelBinding\Index.cshtml" />
+    <Content Include="Views\MVC04ModelBinding\Kullanici.cshtml" />
+    <Content Include="Views\MVC04ModelBinding\Adres.cshtml" />
+    <Content Include="Views\MVC04ModelBinding\KullaniciSayfasi.cshtml" />
+    <Content Include="Views\MVC05ModelValidation\Index.cshtml" />
+    <Content Include="Views\MVC05ModelValidation\UyeListesi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -204,7 +215,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52293</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44331/</IISUrl>
+          <IISUrl>http://localhost:44333/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:44333/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
