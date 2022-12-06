@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - Mvc Eğitimi</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("OzelCss", required: false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -22,7 +23,8 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
                     <li>@Html.ActionLink("Hakkımızda", "About", "Home")</li>
-                    <li>@Html.ActionLink("İletişim", "Contact", "Home")</li>
+                        @Html.Partial("_PartialLogin")
+                    <li>@Html.ActionLink("View Results", "Index", "MVC08ViewResults")</li>
                 </ul>
             </div>
         </div>
@@ -31,6 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
+            @RenderSection("OzelIcerik", required: false)
             <p>&copy; @DateTime.Now.Year - Mvc Eğitimi</p>
         </footer>
     </div>
