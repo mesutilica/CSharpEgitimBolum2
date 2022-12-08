@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Cookie Oku";
+}
+
+<h2>Cookie Oku</h2>
+
+<div>
+    Cookie deki kullanıcı adı : 
+    <b>
+        @TempData["kullaniciadi"]
+    </b>
+</div>
+
+@Html.ActionLink("Kuki Sil", "CookieSil")
