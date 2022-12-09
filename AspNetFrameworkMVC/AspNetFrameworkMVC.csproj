@@ -131,6 +131,11 @@
     <Compile Include="Controllers\MVC08ViewResultsController.cs" />
     <Compile Include="Controllers\MVC09FileUploadController.cs" />
     <Compile Include="Controllers\MVC10CookieController.cs" />
+    <Compile Include="Controllers\MVC11SessionController.cs" />
+    <Compile Include="Controllers\MVC12StringFormatController.cs" />
+    <Compile Include="Controllers\MVC13AppSettingController.cs" />
+    <Compile Include="Controllers\MVC14FiltersUsingController.cs" />
+    <Compile Include="Filters\UserControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -198,6 +203,12 @@
     <Content Include="Views\MVC10Cookie\Index.cshtml" />
     <Content Include="Views\MVC10Cookie\CookieOlustur.cshtml" />
     <Content Include="Views\MVC10Cookie\CookieOku.cshtml" />
+    <Content Include="Views\MVC11Session\Index.cshtml" />
+    <Content Include="Views\MVC11Session\SessionOku.cshtml" />
+    <Content Include="Views\MVC11Session\SessionSil.cshtml" />
+    <Content Include="Views\MVC12StringFormat\Index.cshtml" />
+    <Content Include="Views\MVC13AppSetting\Index.cshtml" />
+    <Content Include="Views\MVC14FiltersUsing\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

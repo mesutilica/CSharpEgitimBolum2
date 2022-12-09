@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO; // dosya işlemleri için gerekli kütüphane
+﻿using System.IO; // dosya işlemleri için gerekli kütüphane
 using System.Web;
 using System.Web.Mvc;
 

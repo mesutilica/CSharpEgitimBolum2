@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data; // Veritabanı işlemleri için gerekli
 using System.Data.SqlClient; // Adonet kütüphaneleri
 

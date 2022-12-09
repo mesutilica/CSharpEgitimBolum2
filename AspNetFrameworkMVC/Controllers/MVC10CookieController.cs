@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,6 +19,7 @@ namespace AspNetFrameworkMVC.Controllers
             };
 
             HttpContext.Response.Cookies.Add(cookie); // .net framework de HttpContext ile oluşturuyoruz
+            TempData["kullaniciadi"] = HttpContext.Request.Cookies["username"].Value;
             return View();
         }
         public ActionResult CookieOku()
@@ -29,13 +28,13 @@ namespace AspNetFrameworkMVC.Controllers
             {
                 TempData["kullaniciadi"] = HttpContext.Request.Cookies["username"].Value; // yukardaki action da oluşturuğumuz cookie yi başka bir sayfada yakalama
             }
-            
+
             return View();
         }
         public ActionResult CookieSil()
         {
-            HttpContext.Request.Cookies["username"].Expires = DateTime.Now.AddSeconds(-1);
-            //HttpContext.Response.Cookies.Remove("username");
+            if (HttpContext.Request.Cookies["username"] != null)
+                HttpContext.Response.Cookies["username"].Expires = DateTime.Now.AddSeconds(-1);
             return RedirectToAction("CookieOku");
         }
     }

@@ -2,9 +2,9 @@
 
 namespace AspNetFrameworkMVC.Controllers
 {
-    public class MVC06SectionController : Controller
+    public class MVC12StringFormatController : Controller
     {
-        // GET: MVC06Section
+        // GET: MVC12StringFormat
         public ActionResult Index()
         {
             return View();
