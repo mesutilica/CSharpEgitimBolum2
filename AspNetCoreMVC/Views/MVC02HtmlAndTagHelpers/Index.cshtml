@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "MVC02 Html Helpers";
+}
+
+<h2>MVC02 Html Helpers</h2>
+
+@Html.ActionLink("Anasayfa", "Index", "Home")
+<br />
+@Html.ActionLink("MVC01RazorSyntax", "Index", "MVC01RazorSyntax")
+
+<h3>
+    Html Chexkbox Oluşturma
+</h3>
+
+@Html.CheckBox("Onay") Onaylıyorum
+
+<h3>
+    Html Textbox Oluşturma
+</h3>
+
+@Html.TextBox("txtAd")
+
+<h3>
+    Html Hidden(Gizli Element) Oluşturma
+</h3>
+
+@Html.Hidden("GizliElement", "Html Hidden(Gizli Element) deki veriler sadece sayfa kaynağında görünür")
+
+<h3>
+    Html Label Oluşturma
+</h3>
+
+@Html.Label("lblAd", "Html label elementi")
+
+<h3>
+    Html Textarea(Çok satırlı input) Oluşturma
+</h3>
+
+@Html.TextArea("txtAdres", "Html Textarea(Çok satırlı input) Oluşturma")
+
+<h3>
+    Html Password(Şifre alanı) Oluşturma
+</h3>
+
+@Html.Password("txtPassword")
+
+<hr />
+
+<h3>
+    Html Helpers ile Form Oluşturma
+</h3>
+
+@using (Html.BeginForm())
+{
+    <h4>Kullanıcı Adı</h4>
+    @Html.Editor("txtKullaniciAdi")
+    <h4>Şifre</h4>
+    @Html.Password("txtPassword")
+    <br />
+    <input type="submit" value="Giriş" />
+}
+
+<h3>Listbox ve DropDownList Elementi Kullanımı</h3>
+
+@{
+    var kategoriler = new SelectListItem[]
+            {
+                new SelectListItem() { Text = "Bilgisayar"},
+                new SelectListItem() { Text = "Elektronik"},
+                new SelectListItem() { Text = "Telefon"}
+                                                            };
+    string htmlRawOrnek = "<h4>Html Raw ile Ekrana Html içerik yazdırma</h4>";
+}
+
+@Html.ListBox("lbListe", kategoriler)
+<br />
+@Html.DropDownList("ddlListe", kategoriler)
+
+<hr />
+
+<h3>RadioButton Elementi Kullanımı</h3>
+
+@Html.RadioButton("rbOnay", "Onaylıyorum") Sözleşmeyi Onaylıyorum
+
+<hr />
+
+<h3>Html Raw ile Ekrana Html içerik yazdırma</h3>
+
+@htmlRawOrnek
+
+@Html.Raw(@htmlRawOrnek)
+
+@Html.Raw("<b style='color:red'>Html Raw ile Ekrana Html içerik yazdırma</b>")
+
+<hr />

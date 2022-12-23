@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationEgitimi", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetFrameworkMVC", "AspNetFrameworkMVC\AspNetFrameworkMVC.csproj", "{C86B7B8F-C376-4DC3-A614-049BA94F5F63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMVC", "AspNetCoreMVC\AspNetCoreMVC.csproj", "{4FD638A9-D2AF-496C-A854-FAA539729427}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C86B7B8F-C376-4DC3-A614-049BA94F5F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C86B7B8F-C376-4DC3-A614-049BA94F5F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C86B7B8F-C376-4DC3-A614-049BA94F5F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD638A9-D2AF-496C-A854-FAA539729427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD638A9-D2AF-496C-A854-FAA539729427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD638A9-D2AF-496C-A854-FAA539729427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD638A9-D2AF-496C-A854-FAA539729427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
