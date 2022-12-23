@@ -1,0 +1,62 @@
+﻿@model AspNetCoreMVC.Models.Adres
+@{
+    ViewBag.Title = "Adres";
+}
+
+<h2>Adres</h2>
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <td>Şehir</td>
+            <td>
+                @Html.EditorFor(m => m.Sehir)
+            </td>
+        </tr>
+        <tr>
+            <td>İlçe</td>
+            <td>
+                @Html.EditorFor(m => m.Ilce)
+            </td>
+        </tr>
+        <tr>
+            <td>Açık Adres</td>
+            <td>
+                @Html.EditorFor(m => m.AcikAdres)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input id="Submit1" type="submit" value="Kaydet" />
+            </td>
+        </tr>
+    </table>
+}
+
+@{
+    if (Model != null)
+    {
+        <table class="table">
+            <tr>
+                <td>Şehir</td>
+                <td>
+                    @Model.Sehir
+                </td>
+            </tr>
+            <tr>
+                <td>İlçe</td>
+                <td>
+                    @Model.Ilce
+                </td>
+            </tr>
+            <tr>
+                <td>Açık Adres</td>
+                <td>
+                    @Model.AcikAdres
+                </td>
+            </tr>
+        </table>
+    }
+}

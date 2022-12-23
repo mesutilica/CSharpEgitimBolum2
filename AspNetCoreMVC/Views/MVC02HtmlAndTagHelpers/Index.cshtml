@@ -1,12 +1,14 @@
 ﻿@{
-    ViewBag.Title = "MVC02 Html Helpers";
+    ViewBag.Title = "MVC02 Html ve Tag Helpers";
 }
 
-<h2>MVC02 Html Helpers</h2>
+<h2>MVC02 Html ve Tag Helpers</h2>
 
 @Html.ActionLink("Anasayfa", "Index", "Home")
 <br />
 @Html.ActionLink("MVC01RazorSyntax", "Index", "MVC01RazorSyntax")
+
+<a class="nav-link text-dark" asp-area="" asp-controller="MVC01RazorSyntax" asp-action="Index" asp-route-id="18">RazorSyntax</a>
 
 <h3>
     Html Chexkbox Oluşturma
@@ -59,6 +61,21 @@
     <br />
     <input type="submit" value="Giriş" />
 }
+
+<hr />
+
+<h3>
+    Tag Helpers ile Form Oluşturma
+</h3>
+
+<form asp-controller="MVC02HtmlAndTagHelpers" asp-action="Index" method="post">
+    <h4>Kullanıcı Adı</h4>
+    <input id="txtKullaniciAdi" name="txtKullaniciAdi" type="text" value="" />
+    <h4>Şifre</h4>
+    <input id="txtsifre" name="txtsifre" type="password" value="" />
+    <br />
+    <input type="submit" value="Giriş" />
+</form>
 
 <h3>Listbox ve DropDownList Elementi Kullanımı</h3>
 

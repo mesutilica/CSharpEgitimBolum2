@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "MVC Partial Kullanımı";
+}
+
+<h1>MVC Partial Kullanımı</h1>
+
+<p>
+    Partial parça anlamına gelir ve kod sayısı fazlalaşan ve karmaşıklaşan uygulamalarda sayfalarımızı parçalara ayırarak yönetmemizi kolaylaştırır.
+</p>
+
+@Html.Partial("_PartialTest")
+
+<h3>Tag Helper Partial</h3>
+
+<partial name="_PartialTest" />
