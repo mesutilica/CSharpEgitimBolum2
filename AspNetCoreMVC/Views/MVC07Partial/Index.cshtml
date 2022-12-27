@@ -1,4 +1,4 @@
-﻿
+﻿@model Kullanici
 @{
     ViewData["Title"] = "MVC Partial Kullanımı";
 }
@@ -14,3 +14,17 @@
 <h3>Tag Helper Partial</h3>
 
 <partial name="_PartialTest" />
+
+<h3>Partialda Model Kullanımı</h3>
+
+<partial name="_PartialModelKullanimi" model="Model" />
+
+<h3>Partialin Asenkron Çağrılması</h3>
+
+@await Html.PartialAsync("_PartialModelKullanimi", Model)
+
+<h3>RenderPartialAsync</h3>
+
+@{
+    await Html.RenderPartialAsync("_PartialModelKullanimi", Model);
+}

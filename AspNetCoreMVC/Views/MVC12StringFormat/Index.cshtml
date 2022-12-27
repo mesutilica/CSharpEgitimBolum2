@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "String Format : Ekrandaki verileri formatlamak için kullanırız.";
+    DateTime tarih = DateTime.Now;
+}
+
+<h2>String Format : Ekrandaki verileri formatlamak için kullanırız.</h2>
+
+<h3>
+    Tarih Formatlama
+</h3>
+
+<h4>
+    @tarih
+</h4>
+
+@("Kısa Saat -t : " + String.Format("{0:t}", tarih))
+
+<hr />
+
+@("Kısa Tarih -d : " + String.Format("{0:d}", tarih))
+
+<hr />
+
+@("Yıl -yyyy : " + String.Format("{0:yyyy}", tarih))
+
+<hr />
+
+<h3>
+    Sayı Formatlama
+</h3>
+
+@("0:C : " + String.Format("{0:C}", 49.50))
+
+<hr />
+
+@("0:D3 : " + String.Format("{0:D3}", 10))
+
+<hr />
+
+@("0:D5 : " + String.Format("{0:D5}", 10))
+
+<hr />
+
+@("0:F1 : " + String.Format("{0:F1}", 15.96))
+
+<hr />
+
+@("0:F2 : " + String.Format("{0:F2}", 15.9))
+
+<hr />
+
+@("0:F3 : " + String.Format("{0:F3}", 15.96))
+
+<hr />

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCoreMVC.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreMVC.Controllers
 {
@@ -6,7 +7,15 @@ namespace AspNetCoreMVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            Kullanici kullanici = new Kullanici()
+            {
+                Ad = "Murat",
+                Soyad = "Yılmaz",
+                Email = "info@yoneciti.com",
+                KullaniciAdi = "murat",
+                Sifre = "123456"
+            };
+            return View(kullanici);
         }
     }
 }

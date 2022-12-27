@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Cookie Oku";
+}
+
+<h1>Cookie Oku</h1>
+
+<a asp-action="Index">
+    Cookie Oluştur
+</a>
+
+<hr />
+
+<a asp-action="CookieSil">
+    Cookie Sil
+</a>
+
+<hr />
+
+<h3>
+    Cookie deki kullanıcı adı : @TempData["kullaniciadi"]
+</h3>
+
+<h3>
+    Cookie deki kullanıcı guid : @TempData["kullaniciguid"]
+</h3>
