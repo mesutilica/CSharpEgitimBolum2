@@ -174,7 +174,7 @@
     <p>sup HTML öğesi <sup>üst yazı</sup> metnini tanımlar</p>
 
     <h3>Html de liste elemanları kullanımı</h3>
-    <p>Sıralı ve sırasız liste olmak üzere 2 farklı liste kullanabiliriz</p>
+    <p>Sıralı, sırasız ve açıklama listesi olmak üzere 3 farklı liste kullanabiliriz</p>
 
     <ul>
         <li>Unordered HTML List</li>
@@ -192,10 +192,9 @@
 
     <h3>Sıralı Liste</h3>
     <ol>
-        <li><a href="#">Anasayfa</a></li>
-        <li><a href="#">Hakkımızda</a></li>
-        <li><a href="#">Ürünlerimiz</a></li>
-        <li><a href="#">İletişim</a></li>
+        <li>Klavye</li>
+        <li>Mouse</li>
+        <li>Monitör</li>
     </ol>
 
     <h4>Bir diğer liste yöntemi de dl yani Description Lists dir. Açıklamalı listeler oluşturmada kullanılır</h4>
@@ -237,6 +236,76 @@
             </table>
         </form>
     </fieldset>
+
+    <h3>Input-Veri Giriş Elementleri</h3>
+
+    <p>
+        Uygulamalarda kullanıcılardan veri almamızı sağlarlar
+    </p>
+
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    Ürün Adı
+                </td>
+                <td>
+                    <input type="text" id="urunAdi" name="elementAdi"
+                           value="Bilgisayar">
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Fiyatı</td>
+                <td>
+                    <input type="text" name="urunFiyati" placeholder="Ürünün
+                            fiyatını giriniz">
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Stok</td>
+                <td>
+                    <input type="number" name="urunStok" placeholder="Ürünün
+                            stoğunu giriniz">
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Kategorisi</td>
+                <td>
+                    <select name="urunKategorisi" id="urunKategorisi">
+                        <option value="-1">Seçiniz</option>
+                        <option value="1">Bilgisayar</option>
+                        <option value="2">Elektronik</option>
+                        <option value="3">Telefon</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Açıklaması</td>
+                <td>
+                    <textarea name="UrunAciklamasi" id="aciklama" cols="30"
+                              rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Durum</td>
+                <td>
+                    <input type="checkbox" id="durum" name="durum">
+                    <label for="durum">Aktif</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Anasayfa</td>
+                <td>
+                    <input type="radio" id="anasayfa" name="anasayfa">
+                    <label for="anasayfa">Göster</label>
+                    <input type="radio" id="anasayfa" name="anasayfa">
+                    <label for="anasayfa">Gösterme</label>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <button type="submit">Ürünü Kaydet</button>
+    </form>
 
     <h2>Semantik html5 elementleri</h2>
 
